@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1129" height="900" viewBox="0 0 1129 900">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #42b7c8;
+        fill-rule: evenodd;
+        opacity: 0.3;
+      }
+    </style>
+  </defs>
+  <path id="SLANTED" class="cls-1" d="M1600,0V900H471" transform="translate(-471)"/>
+</svg>

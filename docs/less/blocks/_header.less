@@ -1,0 +1,117 @@
+.header {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 90px 0 265px;
+  background: url("../../img/header/corner.svg") center -5% no-repeat,
+    url("../../img/header/bg.jpg") right center no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+      138deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(66, 183, 200, 0.5046393557422969) 50%,
+      rgba(66, 183, 200, 0) 100%
+    );
+    background-color: rgba(31, 227, 237, 0.28);
+    background-blend-mode: soft-light;
+    content: "";
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+  }
+  // .header__text-wrapper
+  &__text-wrapper {
+    max-width: 580px;
+  }
+  // .header__title
+  &__title {
+    font-weight: 300;
+    font-size: 72px;
+    letter-spacing: -0.025em;
+  }
+  // .header__subtitle
+  &__subtitle {
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 200px;
+  // .navbar__btn
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  // .navbar__btn-burger
+  &__btn-burger {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: 5px;
+    margin-bottom: 12px;
+    background-color: #000;
+    border-radius: 2px;
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 5px;
+      background-color: #000;
+      border-radius: 2px;
+      content: "";
+    }
+
+    &::after {
+      top: -9px;
+    }
+
+    &::before {
+      bottom: -9px;
+    }
+  }
+  // .navbar__btn-text
+  &__btn-text {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+  background-color: #000;
+}
