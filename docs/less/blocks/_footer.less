@@ -1,0 +1,114 @@
+.footer {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 100px 0;
+  background-color: @bluegray;
+
+  // .footer__left-side
+  &__left-side {
+    flex-shrink: 5;
+    max-width: 280px;
+  }
+
+  // .footer__mid
+  &__mid {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    max-width: 280px;
+  }
+
+  // .footer__right-side
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 10;
+    max-width: 480px;
+  }
+
+  // .footer__right-side-form
+  &__right-side-form {
+    position: relative;
+    display: flex;
+    height: 60px;
+    margin-bottom: 75px;
+  }
+
+  // .footer__right-side-form-email
+  &__right-side-form-email {
+    width: calc(100% - 60px);
+    height: 100%;
+    padding: 0 15px;
+    color: #919191;
+    background-color: rgba(144, 145, 147, 0.4);
+
+    &::placeholder {
+      padding-left: 15px;
+      color: #919191;
+    }
+  }
+
+  // .footer__right-side-form-btn-arrow
+  &__right-side-form-btn-arrow {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 11px;
+    height: 4px;
+    background-color: #919191;
+    border-radius: 2px;
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      right: -5px;
+      width: 12px;
+      height: 4px;
+      background-color: #919191;
+      border-radius: 2px;
+      content: "";
+    }
+
+    &::before {
+      position: absolute;
+      top: -3px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -3px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .footer__right-side-form-btn
+  &__right-side-form-btn {
+    display: inline-block;
+    width: 60px;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(144, 145, 147, 0.4);
+  }
+
+  //.footer__right-side-sponsor
+
+  &__right-side-sponsor {
+    display: flex;
+  }
+
+  // .footer__right-side-sponsor-logo
+  &__right-side-sponsor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    color: #f2f7fb;
+    border: 1px solid #f4f8fb;
+  }
+}

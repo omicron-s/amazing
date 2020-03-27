@@ -51,7 +51,7 @@ input {
 
   @media (min-width: 1200px) {
     max-width: 1180px;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -84,17 +84,50 @@ input {
   }
 }
 
-.title {
-  font-weight: 700;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-.desc {
-  margin: 0;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
+.article {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 580px;
+  color: #fff;
+
+  // .article--title
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  // .article--desc
+  &__desc {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+
+  // .article--footer
+  &--footer {
+    max-width: unset;
+
+    .article__title {
+      margin-bottom: 20px;
+      color: #f9f9f9;
+      font-size: 18px;
+    }
+
+    .article__desc {
+      margin-bottom: 25px;
+      color: #919191;
+      font-size: 14px;
+      letter-spacing: normal;
+    }
+  }
 }
 
 .btn {
@@ -115,11 +148,131 @@ input {
   &:hover {
     color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 200, 0.3),
-    0 0 10px rgba(255, 200, 255, 0.3),
-    0 0 15px rgba(200, 255, 255, 0.3);
+      0 0 10px rgba(255, 200, 255, 0.3), 0 0 15px rgba(200, 255, 255, 0.3);
     box-shadow: 0 0 5px 0px rgba(255, 255, 200, 0.3),
       0 0 10px 5px rgba(255, 200, 255, 0.3),
       0 0 15px 10px rgba(200, 255, 255, 0.3);
     transition: 0.2s ease;
+  }
+}
+
+.contact-list {
+  font-size: 14px;
+
+  // .contact-list__item
+  &__item {
+    a {
+      color: #919191;
+      transition: color 0.3s ease;
+    }
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-top: -3px;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+      fill: #919191;
+    }
+    span {
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.facebook {
+  a:hover {
+    color: @facebook;
+    transition: color 0.3s ease;
+    svg {
+      fill: @facebook;
+    }
+  }
+}
+
+.twitter {
+  a:hover {
+    color: @twitter;
+    svg {
+      fill: @twitter;
+    }
+  }
+}
+
+.instagram {
+  svg {
+    margin-right: 7px;
+    fill: url(#instagram-color);
+  }
+  stop {
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    stop {
+      transition: color 0.3s ease;
+    }
+    stop.stop-color-1 {
+      stop-color: #fdf497;
+    }
+    stop.stop-color-2 {
+      stop-color: #fd5949;
+    }
+    stop.stop-color-3 {
+      stop-color: #d6249f;
+    }
+    stop.stop-color-4 {
+      stop-color: #285aeb;
+    }
+    // <stop class="stop-color-1" offset="0%" stop-color="#fdf497" />
+    // <stop class="stop-color-2" offset="45%" stop-color="#fd5949" />
+    // <stop class="stop-color-3" offset="60%" stop-color="#d6249f" />
+    // <stop class="stop-color-4" offset="90%" stop-color="#285aeb" />
+    .instagram__i {
+      color: #fcaf45;
+      transition-delay: 0.06s;
+    }
+    .instagram__n {
+      color: #f77737;
+      transition-delay: 0.09s;
+    }
+    .instagram__s {
+      color: #f56040;
+      transition-delay: 0.12s;
+    }
+    .instagram__t {
+      color: #fd1d1d;
+      transition-delay: 0.15s;
+    }
+    .instagram__a1 {
+      color: #e1306c;
+      transition-delay: 0.18s;
+    }
+    .instagram__g {
+      color: #c13584;
+      transition-delay: 0.21s;
+    }
+    .instagram__r {
+      color: #833ab4;
+      transition-delay: 0.24s;
+    }
+    .instagram__a2 {
+      color: #5851db;
+      transition-delay: 0.27s;
+    }
+    .instagram__m {
+      color: #405de6;
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+.spotify {
+  svg {
+    margin-right: 7px;
+  }
+  a:hover {
+    color: @spotify;
+    svg {
+      fill: @spotify;
+    }
   }
 }

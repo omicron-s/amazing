@@ -1,0 +1,28 @@
+.music {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 119px 0;
+  background-color: @gray;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 50%;
+    background-color: @green;
+    content: "";
+  }
+
+  // .music__left-side
+  &__left-side {
+    padding: 15px 60px 15px 15px;
+  }
+  // .music__right-side
+  &__right-side {
+    padding: 15px 15px 15px 60px;
+  }
+}
