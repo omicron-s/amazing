@@ -144,14 +144,13 @@ input {
 }
 .contact-list__item a {
   color: #919191;
-  transition: color 0.3s ease;
 }
 .contact-list__item svg {
   width: 14px;
   height: 14px;
   margin-top: -3px;
   margin-right: 10px;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
   fill: #919191;
 }
 .contact-list__item span {
@@ -170,15 +169,8 @@ input {
 .twitter a:hover svg {
   fill: #00acee;
 }
-.instagram svg {
-  margin-right: 7px;
-  fill: url(#instagram-color);
-}
-.instagram stop {
-  transition: color 0.3s ease;
-}
 .instagram a:hover stop {
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 }
 .instagram a:hover stop.stop-color-1 {
   stop-color: #fdf497;
@@ -227,9 +219,6 @@ input {
 .instagram a:hover .instagram__m {
   color: #405de6;
   transition-delay: 0.3s;
-}
-.spotify svg {
-  margin-right: 7px;
 }
 .spotify a:hover {
   color: #1DB954;
@@ -286,6 +275,30 @@ input {
   height: 80px;
   margin-bottom: 200px;
 }
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu-list {
+  color: #000;
+}
 .navbar__btn {
   display: flex;
   flex-direction: column;
@@ -321,19 +334,10 @@ input {
 .navbar__btn-text {
   font-size: 12px;
   text-transform: uppercase;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 1;
-  text-align: center;
-  background-color: #000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .about {
   max-width: 1600px;
@@ -353,6 +357,12 @@ input {
   mix-blend-mode: darken;
   content: "";
 }
+.about__left-side-img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .about__right-side {
   padding: 15px 15px 15px 60px;
   color: #666666;
@@ -367,6 +377,10 @@ input {
 }
 .gallery__img {
   max-width: 25%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gallery__left-side {
   padding: 15px 60px 15px 15px;
@@ -376,6 +390,10 @@ input {
   flex: 0 1 50%;
   max-width: 25%;
   margin-right: 25%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .video {
   position: relative;

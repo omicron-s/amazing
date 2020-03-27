@@ -56,8 +56,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: @navbar;
   margin-bottom: 200px;
+
+  // .navbar__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: @navbar;
+    height: @navbar;
+    color: #fff;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    background-color: #000;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  
+  // .navbar__menu
+  &__menu {
+    display: flex;
+  }
+
+  // .navbar__menu-list
+  &__menu-list {
+    color: #000;
+  }
+
   // .navbar__btn
   &__btn {
     display: flex;
@@ -99,19 +128,6 @@
   &__btn-text {
     font-size: 12px;
     text-transform: uppercase;
+    user-select: none;
   }
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 1;
-  text-align: center;
-  background-color: #000;
 }
