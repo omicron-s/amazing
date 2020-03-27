@@ -76,7 +76,6 @@
     user-select: none;
   }
 
-  
   // .navbar__menu
   &__menu {
     display: flex;
@@ -84,12 +83,21 @@
 
   // .navbar__menu-list
   &__menu-list {
+    margin-right: 40px;
     color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    &:hover,
+    &:focus {
+      color: #919191;
+      transition: color 0.2s ease;
+    }
   }
 
   // .navbar__btn
   &__btn {
-    display: flex;
+    display: none;
+    // display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
@@ -129,5 +137,23 @@
     font-size: 12px;
     text-transform: uppercase;
     user-select: none;
+  }
+  // .navbar__contacts
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    a {
+      color: #000;
+    }
+    svg {
+      fill: #000;
+    }
+    .contacts-list__item {
+      margin-right: 20px;
+    }
   }
 }

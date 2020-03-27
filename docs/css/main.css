@@ -139,13 +139,14 @@ input {
   box-shadow: 0 0 5px 0px rgba(255, 255, 200, 0.3), 0 0 10px 5px rgba(255, 200, 255, 0.3), 0 0 15px 10px rgba(200, 255, 255, 0.3);
   transition: 0.2s ease;
 }
-.contact-list {
+.contacts-list {
   font-size: 14px;
 }
-.contact-list__item a {
+.contacts-list__item a {
   color: #919191;
+  transition: 0.3s ease;
 }
-.contact-list__item svg {
+.contacts-list__item svg {
   width: 14px;
   height: 14px;
   margin-top: -3px;
@@ -153,7 +154,7 @@ input {
   transition: 0.3s ease;
   fill: #919191;
 }
-.contact-list__item span {
+.contacts-list__item span {
   transition: 0.3s ease;
 }
 .facebook a:hover {
@@ -297,10 +298,18 @@ input {
   display: flex;
 }
 .navbar__menu-list {
+  margin-right: 40px;
   color: #000;
+  font-weight: 700;
+  font-size: 18px;
+}
+.navbar__menu-list:hover,
+.navbar__menu-list:focus {
+  color: #919191;
+  transition: color 0.2s ease;
 }
 .navbar__btn {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
@@ -338,6 +347,23 @@ input {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.navbar__contacts {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+.navbar__contacts a {
+  color: #000;
+}
+.navbar__contacts svg {
+  fill: #000;
+}
+.navbar__contacts .contacts-list__item {
+  margin-right: 20px;
 }
 .about {
   max-width: 1600px;
