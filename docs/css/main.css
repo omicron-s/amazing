@@ -442,7 +442,7 @@ input {
 .navbar__menu a,
 .navbar__menu li {
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .navbar__menu.act {
   transform: scaleY(1);
@@ -452,7 +452,7 @@ input {
 .navbar__menu.act a,
 .navbar__menu.act li {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .navbar__menu-list {
   display: flex;
