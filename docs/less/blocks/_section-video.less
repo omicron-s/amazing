@@ -11,9 +11,9 @@
   &::before {
     position: absolute;
     top: 0;
+    right: calc(50% + 295px);
     bottom: 0;
     left: 0;
-    width: 25%;
     background-color: @gray;
     content: "";
   }
@@ -21,10 +21,11 @@
   // .video__blank
   &__blank {
     max-width: calc(1180px / 4);
-    margin-left: 25%;
+    margin-left: 50%;
     padding: 125px 65px 95px;
     color: @green;
     background-color: @bluegray;
+    transform: translateX(-100%);
   }
 
   // .video__blank-title
