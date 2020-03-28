@@ -332,6 +332,7 @@ input {
   text-align: center;
   background-color: #000;
   cursor: pointer;
+  transition: 0.5s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -341,6 +342,7 @@ input {
 .navbar__logo:active,
 .navbar__logo:focus {
   color: #2ebd59;
+  transition: 0.5s;
 }
 .navbar__btn {
   display: flex;
