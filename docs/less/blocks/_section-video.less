@@ -1,8 +1,8 @@
 .video {
   position: relative;
-  max-width: 1600px;
   height: 900px;
   margin: 0 auto;
+  background-color: @gray;
   background-image: url("../../img/video/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +20,7 @@
 
   // .video__blank
   &__blank {
-    max-width: 25%;
+    max-width: calc(1180px / 4);
     margin-left: 25%;
     padding: 125px 65px 95px;
     color: @green;
@@ -65,8 +65,8 @@
       color: @green;
       text-shadow: 0 0 5px rgba(@green, 0.3), 0 0 10px rgba(@green, 0.3),
         0 0 15px rgba(@green, 0.3);
-      box-shadow: 0 0 5px 0px rgba(@green, 0.3),
-        0 0 10px 5px rgba(@green, 0.3), 0 0 15px 10px rgba(@green, 0.3);
+      box-shadow: 0 0 5px 0px rgba(@green, 0.3), 0 0 10px 5px rgba(@green, 0.3),
+        0 0 15px 10px rgba(@green, 0.3);
       transition: 0.2s ease;
     }
   }
