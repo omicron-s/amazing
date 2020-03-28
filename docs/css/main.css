@@ -533,11 +533,15 @@ input {
   background-color: #3f729b;
 }
 .gallery__img {
+  flex: 0 1 25%;
   max-width: 25%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.gallery__img img {
+  min-width: 100%;
 }
 .gallery__left-side {
   padding: 15px 60px 15px 15px;
@@ -551,6 +555,9 @@ input {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.gallery__right-side img {
+  min-width: 100%;
 }
 .video {
   position: relative;

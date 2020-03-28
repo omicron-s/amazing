@@ -3,8 +3,12 @@
 
   // .gallery__img
   &__img {
+    flex: 0 1 25%;
     max-width: 25%;
     user-select: none;
+    img {
+      min-width: 100%;
+    }
   }
   // .gallery__left-side
   &__left-side {
@@ -18,8 +22,11 @@
     max-width: 25%;
     margin-right: 25%;
     user-select: none;
-}
-// .gallery__right-side-img
-&__right-side-img {
+    img {
+      min-width: 100%;
+    }
+  }
+  // .gallery__right-side-img
+  &__right-side-img {
   }
 }
