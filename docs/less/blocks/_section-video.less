@@ -58,6 +58,17 @@
     color: @green;
     letter-spacing: normal;
     border-color: @green;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: @green;
+      text-shadow: 0 0 5px rgba(@green, 0.3), 0 0 10px rgba(@green, 0.3),
+        0 0 15px rgba(@green, 0.3);
+      box-shadow: 0 0 5px 0px rgba(@green, 0.3),
+        0 0 10px 5px rgba(@green, 0.3), 0 0 15px 10px rgba(@green, 0.3);
+      transition: 0.2s ease;
+    }
   }
 
   // .video__blank-btn-play

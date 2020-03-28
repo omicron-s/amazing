@@ -29,6 +29,20 @@
 //   }
 // });
 
+$(function() {
+  $(".navbar__btn").click(function() {
+    $(this).toggleClass("act");
+    if ($(this).hasClass("act")) {
+      $(".navbar__menu").addClass("act");
+      if ($(window).width() < 1200) {
+        $("body").css("overflow", "hidden");
+      }
+    } else {
+      $(".navbar__menu").removeClass("act");
+      $("body").css("overflow", "unset");
+    }
+  });
+});
 // mobile-menu
 // $(function() {
 //   $(".navbar__btn").click(function() {

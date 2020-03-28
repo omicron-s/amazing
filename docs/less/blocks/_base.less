@@ -145,7 +145,9 @@ input {
   border-radius: 28px;
   transition: 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 200, 0.3),
       0 0 10px rgba(255, 200, 255, 0.3), 0 0 15px rgba(200, 255, 255, 0.3);
@@ -179,78 +181,94 @@ input {
   }
 }
 
-.facebook a:hover {
-  color: @facebook;
-  transition: color 0.3s ease;
-  svg {
-    fill: @facebook;
+.facebook > a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: @facebook;
+    transition: color 0.3s ease;
+    svg {
+      fill: @facebook;
+    }
   }
 }
 
-.twitter a:hover {
-  color: @twitter;
-  svg {
-    fill: @twitter;
+.twitter > a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: @twitter;
+    svg {
+      fill: @twitter;
+    }
   }
 }
 
-.instagram a:hover {
-  stop {
-    transition: 0.3s ease;
-  }
-  stop.stop-color-1 {
-    stop-color: #fdf497;
-  }
-  stop.stop-color-2 {
-    stop-color: #fd5949;
-  }
-  stop.stop-color-3 {
-    stop-color: #d6249f;
-  }
-  stop.stop-color-4 {
-    stop-color: #285aeb;
-  }
-  .instagram__i {
-    color: #fcaf45;
-    transition-delay: 0.06s;
-  }
-  .instagram__n {
-    color: #f77737;
-    transition-delay: 0.09s;
-  }
-  .instagram__s {
-    color: #f56040;
-    transition-delay: 0.12s;
-  }
-  .instagram__t {
-    color: #fd1d1d;
-    transition-delay: 0.15s;
-  }
-  .instagram__a1 {
-    color: #e1306c;
-    transition-delay: 0.18s;
-  }
-  .instagram__g {
-    color: #c13584;
-    transition-delay: 0.21s;
-  }
-  .instagram__r {
-    color: #833ab4;
-    transition-delay: 0.24s;
-  }
-  .instagram__a2 {
-    color: #5851db;
-    transition-delay: 0.27s;
-  }
-  .instagram__m {
-    color: #405de6;
-    transition-delay: 0.3s;
+.instagram > a {
+  &:hover,
+  &:active,
+  &:focus {
+    stop {
+      transition: 0.3s ease;
+    }
+    stop.stop-color-1 {
+      stop-color: #fdf497;
+    }
+    stop.stop-color-2 {
+      stop-color: #fd5949;
+    }
+    stop.stop-color-3 {
+      stop-color: #d6249f;
+    }
+    stop.stop-color-4 {
+      stop-color: #285aeb;
+    }
+    .instagram__i {
+      color: #fcaf45;
+      transition-delay: 0.06s;
+    }
+    .instagram__n {
+      color: #f77737;
+      transition-delay: 0.09s;
+    }
+    .instagram__s {
+      color: #f56040;
+      transition-delay: 0.12s;
+    }
+    .instagram__t {
+      color: #fd1d1d;
+      transition-delay: 0.15s;
+    }
+    .instagram__a1 {
+      color: #e1306c;
+      transition-delay: 0.18s;
+    }
+    .instagram__g {
+      color: #c13584;
+      transition-delay: 0.21s;
+    }
+    .instagram__r {
+      color: #833ab4;
+      transition-delay: 0.24s;
+    }
+    .instagram__a2 {
+      color: #5851db;
+      transition-delay: 0.27s;
+    }
+    .instagram__m {
+      color: #405de6;
+      transition-delay: 0.3s;
+    }
   }
 }
 
-.spotify a:hover {
-  color: @spotify;
-  svg {
-    fill: @spotify;
+.spotify > a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: @spotify;
+    svg {
+      fill: @spotify;
+    }
   }
 }
