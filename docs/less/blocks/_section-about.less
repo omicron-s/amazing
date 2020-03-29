@@ -19,8 +19,13 @@
 
   // .about__left-side-img
   &__left-side-img {
-min-width: 100%;
+    z-index: -1;
+    min-width: 100%;
     user-select: none;
+
+    @media (min-width: 768px) and (max-width: 905px) {
+      min-width: 130%;
+    }
   }
 
   // .about__right-side
@@ -29,7 +34,7 @@ min-width: 100%;
     color: #666666;
 
     @media (min-width: 768px) {
-      padding: 15px;
+      padding: 15px 15px 15px 45px;
     }
 
     @media (min-width: 1200px) {

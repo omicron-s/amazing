@@ -74,6 +74,14 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .row-w {
@@ -147,7 +155,7 @@ input {
       color: #f9f9f9;
       font-size: 16px;
 
-      @media (min-width: 1200px) {
+      @media (min-width: 768px) {
         font-size: 18px;
       }
     }
@@ -189,9 +197,17 @@ input {
     transition: 0.2s ease;
   }
 
+  @media (min-width: 768px) {
+    height: 48px;
+    margin: unset;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 48px;
+  }
+
   @media (min-width: 1200px) {
     height: 56px;
-    margin: unset;
+
     padding: 0 25px;
     font-size: 18px;
     line-height: 56px;
