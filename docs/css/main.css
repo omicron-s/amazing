@@ -411,7 +411,7 @@ input {
 .navbar-wrapper.fixed {
   position: fixed;
   top: 0;
-  background-color: rgba(113, 212, 239, 0.5);
+  background-color: rgba(113, 212, 239, 0.8);
   transition: background-color 1s;
 }
 .navbar-wrapper.fixed .navbar {
