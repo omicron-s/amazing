@@ -57,3 +57,5 @@ $(window).resize(function() {
   $(".navbar__menu").removeClass("act");
   $("body").css("overflow", "unset");
 });
+
+
