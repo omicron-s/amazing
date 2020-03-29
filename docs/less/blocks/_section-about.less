@@ -1,11 +1,9 @@
 .about {
-  max-width: 1600px;
-  margin: 0 auto;
-
   // .about__left-side
   &__left-side {
     position: relative;
     flex: 0 1 50%;
+    overflow: hidden;
 
     &::before {
       position: absolute;
@@ -21,14 +19,23 @@
 
   // .about__left-side-img
   &__left-side-img {
+min-width: 100%;
     user-select: none;
   }
 
   // .about__right-side
   &__right-side {
-    padding: 15px 15px 15px 60px;
+    padding: 30px 15px;
     color: #666666;
-    
+
+    @media (min-width: 768px) {
+      padding: 15px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 15px 15px 15px 60px;
+    }
+
     .article__desc {
       margin-bottom: 0;
     }

@@ -1,26 +1,55 @@
 .music {
   position: relative;
   z-index: 1;
-  padding: 119px 0;
+  padding: 0;
+  overflow: hidden;
   background-color: @gray;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 50%;
-    background-color: @green;
-    content: "";
+  @media (min-width: 1200px) {
+    padding: 119px 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 50%;
+      background-color: @green;
+      content: "";
+    }
   }
 
   // .music__left-side
   &__left-side {
-    padding: 15px 60px 15px 15px;
+    position: relative;
+    padding: 30px 15px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: -300%;
+      bottom: 0;
+      left: -300%;
+      z-index: -1;
+      background-color: @green;
+      content: "";
+    }
+    
+    @media (min-width: 1200px) {
+      padding: 15px 60px 15px 15px;
+
+      &::before {
+        display: none;
+      }
+    }
   }
   // .music__right-side
   &__right-side {
-    padding: 15px 15px 15px 60px;
+    padding: 30px 15px;
+
+    @media (min-width: 1200px) {
+      padding: 15px 15px 15px 60px;
+    }
   }
 }

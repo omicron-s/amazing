@@ -42,6 +42,12 @@ $(function() {
       $("body").css("overflow", "unset");
     }
   });
+
+  $(".navbar__menu a").click(function() {
+    $(".navbar__btn").removeClass("act");
+    $(".navbar__menu").removeClass("act");
+    $("body").css("overflow", "unset");
+  });
 });
 // mobile-menu
 // $(function() {

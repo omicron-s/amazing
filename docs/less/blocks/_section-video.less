@@ -1,46 +1,65 @@
 .video {
-  position: relative;
-  height: 900px;
-  margin: 0 auto;
+  overflow: hidden;
   background-color: @gray;
   background-image: url("../../img/video/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: calc(50% + 295px);
-    bottom: 0;
-    left: 0;
-    background-color: @gray;
-    content: "";
+  @media (min-width: 1200px) {
+    height: 900px;
+    background-size: cover;
   }
 
   // .video__blank
   &__blank {
-    max-width: calc(1180px / 4);
-    margin-left: 50%;
-    padding: 125px 65px 95px;
+    position: relative;
+    display: grid;
+    padding: 30px 15px 30px;
     color: @green;
-    background-color: @bluegray;
-    transform: translateX(-100%);
+    background-color: rgba(@bluegray, 0.7);
+
+    @media (min-width: 1200px) {
+      display: block;
+      max-width: 400px;
+      margin-left: 50%;
+      padding: 125px 65px 95px;
+      background-color: @bluegray;
+      transform: translateX(-100%);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        bottom: -100%;
+        left: -1000%;
+        background-color: @gray;
+        content: "";
+      }
+    }
   }
 
   // .video__blank-title
   &__blank-title {
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 16px;
     text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+      font-size: 24px;
+    }
   }
 
   // .video__blank-subtitle
   &__blank-subtitle {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+      font-size: 18px;
+    }
   }
 
   // .video__blank-list
@@ -56,6 +75,7 @@
 
   // .video__blank-btn
   &__blank-btn {
+    padding: 0 15px;
     color: @green;
     letter-spacing: normal;
     border-color: @green;
@@ -70,13 +90,21 @@
         0 0 15px 10px rgba(@green, 0.3);
       transition: 0.2s ease;
     }
+
+    @media (min-width: 1200px) {
+    }
   }
 
   // .video__blank-btn-play
   &__blank-btn-play {
     display: inline-block;
-    margin-left: 5px;
-    border: 7px solid transparent;
-    border-left: 12px solid @green;
+    margin: 0 -8px 0 5px;
+    border: 5px solid transparent;
+    border-left: 9px solid @green;
+
+    @media (min-width: 1200px) {
+      border: 7px solid transparent;
+      border-left: 12px solid @green;
+    }
   }
 }

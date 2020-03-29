@@ -1,11 +1,7 @@
 .header {
   position: relative;
   z-index: 1;
-  padding: 90px 0 265px;
-  background: url("../../img/header/corner.svg") center -5% no-repeat,
-    url("../../img/header/bg.jpg") right center no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
+  padding: 30px 0 90px;
 
   &::before {
     position: absolute;
@@ -25,13 +21,21 @@
     content: "";
   }
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 25%;
+  @media (min-width: 400px) {
+    background: url("../../img/header/corner.svg") center -5% no-repeat,
+      url("../../img/header/bg.jpg") right center no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
   }
+
+  @media (min-width: 768px) {
+    padding: 45px 0 90px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 90px 0 265px;
+  }
+
   // .header__text-wrapper
   &__text-wrapper {
     max-width: 580px;
@@ -39,15 +43,35 @@
   // .header__title
   &__title {
     font-weight: 300;
-    font-size: 72px;
+    font-size: 42px;
     letter-spacing: -0.025em;
+
+    @media (min-width: 768px) {
+      font-size: 58px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 72px;
+    }
   }
+
   // .header__subtitle
   &__subtitle {
-    font-size: 30px;
+    font-size: 18px;
     line-height: 1.5;
     letter-spacing: -0.025em;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    
+    @media (min-width: 1200px) {
+      font-size: 30px;
+    }
   }
+}
+
+.navbar-wrapper {
 }
 
 .navbar {
@@ -55,19 +79,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: @navbar;
-  margin-bottom: 200px;
+  max-width: 1600px;
+  height: @navbar-sm;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 0 15px;
 
+  @media (min-width: 1200px) {
+    height: @navbar-lg;
+    margin-bottom: 200px;
+  }
   // .navbar__logo
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: @navbar;
-    height: @navbar;
+    width: @navbar-sm;
+    height: @navbar-sm;
     color: #fff;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 36px;
     line-height: 1;
     text-align: center;
     background-color: #000;
@@ -80,6 +111,12 @@
     &:focus {
       color: @green;
       transition: 0.5s;
+    }
+
+    @media (min-width: 1200px) {
+      width: @navbar-lg;
+      height: @navbar-lg;
+      font-size: 60px;
     }
   }
 
@@ -189,6 +226,7 @@
     &.act {
       transform: scaleY(1);
       visibility: visible;
+      backdrop-filter: blur(5px);
       transition: transform 0.5s;
       a,
       li {
@@ -202,7 +240,7 @@
   &__menu-list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   // .navbar__menu-list-item
