@@ -588,6 +588,8 @@ input {
   transform: scaleY(0);
   transform-origin: top;
   visibility: hidden;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   transition: 0.5s;
 }
 .navbar__menu a,
@@ -598,8 +600,6 @@ input {
 .navbar__menu.act {
   transform: scaleY(1);
   visibility: visible;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   transition: transform 0.5s;
 }
 .navbar__menu.act a,
